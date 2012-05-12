@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS jobberland_admin (
 	username VARCHAR(16) NOT NULL,
 	passwd VARCHAR(32) NOT NULL,
 	PRIMARY KEY  (id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_employee(
 	id 					INT NOT NULL AUTO_INCREMENT,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS  jobberland_employee(
 	KEY country (country),
 	KEY post_code (post_code),
 	INDEX fullname (fname, sname)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_employer (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS jobberland_employer (
 	KEY country (country),
 	KEY post_code (post_code),  
 	INDEX fullname (fname, sname)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_package (
 	id 					INT NOT NULL AUTO_INCREMENT,
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS jobberland_package (
 	is_active 			CHAR(1) NOT NULL,
 	date_inactive		VARCHAR(30) NOT NULL DEFAULT '',
 	PRIMARY KEY (id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_package_invoice (
 	id 				BIGINT NOT NULL auto_increment,
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS jobberland_package_invoice (
 	PRIMARY KEY  (id),
 	KEY (fk_employer_id),
 	KEY (fk_package_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_payments_invoice (
 	id 	 				INT (200) NOT NULL AUTO_INCREMENT,
@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS jobberland_payments_invoice (
 	payment_vars 		text NULL,
 	PRIMARY KEY (id),
 	KEY (fk_invoice_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_category (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS jobberland_category (
 	cat_name VARCHAR (100) NOT NULL,
 	PRIMARY KEY(id),
 	UNIQUE KEY (cat_name, var_name)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_job2category (
 	category_id 	INT NOT NULL,
@@ -155,7 +155,7 @@ CREATE TABLE IF NOT EXISTS jobberland_job2category (
 	PRIMARY KEY  (category_id, job_id),
 	KEY category_id (category_id),
 	KEY job_id (job_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_job ( 
 	id 					BIGINT NOT NULL AUTO_INCREMENT,
@@ -202,7 +202,7 @@ CREATE TABLE IF NOT EXISTS jobberland_job (
 	KEY (city,county,state_province,country),
 	INDEX (fk_career_id),
 	INDEX (fk_experience_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE  IF NOT EXISTS jobberland_job_type (
 	id 			INT NOT NULL AUTO_INCREMENT,
@@ -211,13 +211,13 @@ CREATE TABLE  IF NOT EXISTS jobberland_job_type (
 	is_active 	CHAR(1) NOT NULL DEFAULT 'Y',
 	PRIMARY KEY (id),
 	UNIQUE KEY (type_name)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_job2type (
 	fk_job_id INT NOT NULL,
 	fk_job_type_id INT NOT NULL,
 	PRIMARY KEY (fk_job_id, fk_job_type_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_job_status (
 	id 			INT NOT NULL AUTO_INCREMENT,
@@ -226,13 +226,13 @@ CREATE TABLE IF NOT EXISTS  jobberland_job_status (
 	is_active 	CHAR(1) NOT NULL DEFAULT 'Y',
 	PRIMARY KEY(id),
 	UNIQUE KEY (status_name)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_job2status (
 	fk_job_id INT NOT NULL,
 	fk_job_status_id INT NOT NULL,
 	PRIMARY KEY (fk_job_id, fk_job_status_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_education (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS jobberland_education (
 	is_active 		CHAR(1) NOT NULL DEFAULT 'Y',
 	PRIMARY KEY(id),
 	UNIQUE KEY (education_name)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_career_degree (
 	id 			INT NOT NULL AUTO_INCREMENT,
@@ -250,7 +250,7 @@ CREATE TABLE IF NOT EXISTS  jobberland_career_degree (
 	is_active 	CHAR(1) NOT NULL DEFAULT 'Y',
 	PRIMARY KEY(id),
 	UNIQUE KEY (career_name)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_experience (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -259,7 +259,7 @@ CREATE TABLE IF NOT EXISTS  jobberland_experience (
 	is_active 		CHAR(1) NOT NULL DEFAULT 'Y',
 	PRIMARY KEY(id),
 	UNIQUE KEY (experience_name)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_job_history (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -272,7 +272,7 @@ CREATE TABLE IF NOT EXISTS  jobberland_job_history (
 	PRIMARY KEY  (id),
 	KEY (fk_employee_id),
 	KEY (fk_job_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_save_job (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -283,7 +283,7 @@ CREATE TABLE IF NOT EXISTS  jobberland_save_job (
 	PRIMARY KEY  (id),
 	KEY (fk_employee_id),
 	KEY (fk_job_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_save_search (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -296,7 +296,7 @@ CREATE TABLE IF NOT EXISTS  jobberland_save_search (
 	KEY (fk_employee_id),
 	KEY(reference_name),
 	FULLTEXT (reference)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS  jobberland_cv_detail (
 	id 					INT NOT NULL AUTO_INCREMENT,
@@ -341,19 +341,19 @@ CREATE TABLE IF NOT EXISTS  jobberland_cv_detail (
 	PRIMARY KEY(id),
 	KEY(cv_title, recent_job_title, look_job_title, look_job_title2),
 	key (fk_employee_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_cv_category (
 	cv_id  		INT NOT NULL,
 	category_id INT NOT NULL,
 	PRIMARY KEY(cv_id, category_id )
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_cv_look_occupation (
 	cv_id  		INT NOT NULL,
 	category_id INT NOT NULL,
 	PRIMARY KEY(cv_id, category_id )
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_covering_letter (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -365,7 +365,7 @@ CREATE TABLE IF NOT EXISTS jobberland_covering_letter (
 	is_defult		CHAR(1) NOT NULL DEFAULT 'Y',
 	PRIMARY KEY (id),
 	KEY (fk_employer_id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_cv_view (
 	id 	   			INT NOT NULL AUTO_INCREMENT,
@@ -375,7 +375,7 @@ CREATE TABLE IF NOT EXISTS jobberland_cv_view (
 	created_at 		VARCHAR(30) NOT NULL DEFAULT '',
 	PRIMARY KEY (id),
 	UNIQUE KEY( fk_cv_id, fk_employer_id )
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_email_template (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -387,7 +387,7 @@ CREATE TABLE IF NOT EXISTS jobberland_email_template (
 	email_text		LONGTEXT NOT NULL,
 	PRIMARY KEY  (id),
 	UNIQUE KEY (template_key)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_page (
 	id 			INT NOT NULL AUTO_INCREMENT,
@@ -398,7 +398,7 @@ CREATE TABLE IF NOT EXISTS jobberland_page (
 	PRIMARY KEY (id),
 	UNIQUE KEY (pagekey),
 	KEY title (title)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_setting_category (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -407,7 +407,7 @@ CREATE TABLE IF NOT EXISTS jobberland_setting_category (
 	category_desc 	TEXT,
 	UNIQUE (var_name),
 	PRIMARY KEY (id)
-);
+) ENGINE=MyISAM;
 	
 CREATE TABLE IF NOT EXISTS jobberland_setting (
 	id 				INT NOT NULL AUTO_INCREMENT,
@@ -423,7 +423,7 @@ CREATE TABLE IF NOT EXISTS jobberland_setting (
 	PRIMARY KEY (id),
 	UNIQUE(setting_name),
 	KEY (fk_category_id)
-);
+) ENGINE=MyISAM;
 	
 CREATE TABLE IF NOT EXISTS jobberland_banner (
 	id 			BIGINT NOT NULL AUTO_INCREMENT,
@@ -442,7 +442,7 @@ CREATE TABLE IF NOT EXISTS jobberland_banner (
 	KEY startdate (startdate),
 	KEY expdate (expdate),
 	KEY linkurl (linkurl)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_search (
 	id 			BIGINT NOT NULL AUTO_INCREMENT,
@@ -450,7 +450,7 @@ CREATE TABLE IF NOT EXISTS jobberland_search (
 	results 	INT(5) NOT NULL, 
 	created_on 	VARCHAR(30) NOT NULL DEFAULT '',
 	PRIMARY KEY  (id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_countries (
 	id INT NOT NULL auto_increment,
@@ -462,7 +462,7 @@ CREATE TABLE IF NOT EXISTS jobberland_countries (
 	PRIMARY KEY  (id),
 	KEY name (name),
 	KEY code (code)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_states (
   id INT NOT NULL auto_increment,
@@ -475,7 +475,7 @@ CREATE TABLE IF NOT EXISTS jobberland_states (
   KEY code (code),
   KEY enabled (enabled),
   KEY countrycode (countrycode)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_counties (
   id int(8) NOT NULL auto_increment,
@@ -488,7 +488,7 @@ CREATE TABLE IF NOT EXISTS jobberland_counties (
   PRIMARY KEY  (id),
   KEY code (code),
   KEY countrystate (countrycode,statecode)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_cities (
   id INT NOT NULL auto_increment,
@@ -503,7 +503,7 @@ CREATE TABLE IF NOT EXISTS jobberland_cities (
   KEY code (code),
   KEY countrystate (countrycode,statecode),
   KEY countrystatecounty (countrycode,statecode,countycode)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_payment_config (
   id INT NOT NULL auto_increment,
@@ -523,7 +523,7 @@ CREATE TABLE IF NOT EXISTS jobberland_payment_config (
   last_modified datetime default NULL,
   date_added datetime NOT NULL default '0000-00-00 00:00:00',
   PRIMARY KEY  (id)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_payment_modules (
   id int(11) NOT NULL auto_increment,
@@ -534,7 +534,7 @@ CREATE TABLE IF NOT EXISTS jobberland_payment_modules (
   enabled char(1) NOT NULL default 'N',
   PRIMARY KEY  (id),
   KEY name (name)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_plugin (
 	id 			int NOT NULL auto_increment,
@@ -545,7 +545,7 @@ CREATE TABLE IF NOT EXISTS jobberland_plugin (
     enabled 	char(1) NOT NULL default 'N',
 	PRIMARY KEY  (id),
 	UNIQUE (plugin_key)
-);
+) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS jobberland_plugin_config (
 	id 				int	NOT NULL auto_increment,
@@ -562,5 +562,5 @@ CREATE TABLE IF NOT EXISTS jobberland_plugin_config (
 	PRIMARY KEY  (id),
 	UNIQUE (plugin_key),
 	key(plugin_id)
-);
+) ENGINE=MyISAM;
 
