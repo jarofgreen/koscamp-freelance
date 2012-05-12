@@ -160,7 +160,7 @@
 				}
 			
 				unset($_SESSION['add_job']);
-				$message ="<div class='success'>".format('success', 'job_added')."</div>";
+				$message ="<div class='success'>".format_lang('success', 'job_added')."</div>";
 				destroy_my_session();
 			}else{
 				$message = "<div class='error'>".format_lang('error','jobSaveFail')."</div>";
