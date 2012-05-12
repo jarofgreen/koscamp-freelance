@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	#invoice_tb{
+		border:1px solid;
+		width:700px;
+	}
+	
+	.payment_status_success{
+		font-size:26px;
+		font-weight:bold;
+		color:#0C0;
+	}
+	.payment_status_error{
+		font-size:26px;
+		font-weight:bold;
+		color:#F00;
+	}
+	
+	.bold_underline{
+		font-weight:bold;
+		text-decoration:underline;
+	}
+	
+	.shade{
+		background:#CCCCCC;
+		padding: 5px;
+	}
+	
+	.light_shade{
+		 background-color: #EEEEEB;
+		 color: #000000;
+		 font-weight: bold;
+		 text-align: center;
+	}
+	
+	.bold{
+		font-weight:bold;
+		margin-left:5px;
+	}
+	
+	.address{
+		padding:10px;
+		
+	}
+	.items{
+		border: 1px solid rgb(204, 204, 204);
+		margin-left:5px;
+	}
+	
+	.right{
+		text-align:right;
+	}
+	
+	.pay_right{
+		text-align: right;
+		padding-right: 20px;
+	}

@@ -1,0 +1,28 @@
+What has been change in V1.3?
+
+* Made changes to payment method, user don’t need to do anything just need to enter they email address which will received money
+*Added Basic and advance search.
+*Added Recommend Jobs once user apply for job.
+*Added Application History on home page
+*Added Show CV on home page
+*Added Company logo on job details page.
+*Added pagination on Browse by location, company and category
+*Added full location on job details.
+*Added some error messages for logon.
+*Added employee/employer logon states message e.g. Pending, Rejected
+*Search with City, States and County
+*Added Country in Search form.
+*Added Receiving Confirmation on order complete.
+*Added free option for payment.
+*Updated Language Pack
+
+What has been removed?
+*Remove previous version of payment method.
+*Removed all style of search.
+*Removed old home page (employee).
+*Removed old confirm order (employer)
+
+Fix all know problems with previous version.
+
+Thank you.
+admin

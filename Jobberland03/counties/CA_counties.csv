@@ -1,0 +1,99 @@
+BR,Bow Region,AL
+DE,Downtown Edmonton,AL
+NBR,Northeast Boreal Region,AL
+NSR,Northeast Slopes Region,AL
+NWB,Northwest Boreal Region,AL
+PR,Parkland Region,AL
+PRR,Prairie Region,AL
+BCR,B.C. Rockies,BC
+CCC,Cariboo Chicotin Coast,BC
+NBC,Northern BC,BC
+THI,The Island,BC
+THO,Thompson Okanagan,BC
+VAN,Vancouver,BC
+VCM,Vancouver Coast & Mountain,BC
+VIC,Victoria,BC
+WHI,Whistler,BC
+CP,Central Plains,MT
+ER,Eastern Region,MT
+IR,Interlake Region,MT
+N53,North of 53rd,MT
+PAR,Parkland Region,MT
+PV,Pembina Valley,MT
+WR,Western Region,MT
+WG.Winnipeg,MT
+AC,Acadia Coast,NB
+FA,Fredericton Area,NB
+KE,Kent,MB
+MW,Madaweska,NB
+MIA,Miramichi Area,NB
+MOA,Moncton Area,NB
+REA,Restigouche Area,NB
+SAA,Sackville Area,NB
+SCA,St-Croix Area,NB
+SJA,St-John Area,NB
+USR,Upper St-John River,NB
+AR,Avalon Region,NL
+CR,Central Region,NL
+ER,Eastern Region,NL
+LR,Labrador Region,NL
+WR,Western Region,NL
+BDR,Beaufort Delta Region,WT
+NSR,North Slave Region,WT
+STR,Sathu Region,WT
+SSR,South Slave Region,WT
+CBH,Cap-Breton Highlands National,NS
+CBI,Cap-Breton Islands,NS
+EVR,Evangeline Region,NS
+GLR,Glooscap Region,NS
+HAR,Halifax Region,NS
+KNP,Keijimiksujik National Park,NS
+MDR,Marine Drive River,NS
+SRR,Sunrise Region,NS
+QK,Baffin (Qikiqtaaluk).NV
+KV,Keewatin (Kivalliq),NV
+KT,Kitikmeot,NV
+AC,Algoma Country,ON
+FC,Festival Country,ON
+GC,Gateway Country,ON
+JB,James Bay Frontier,ON
+LA,Lakelands,ON
+MT,Metropolitain Toronto,ON
+NN,Near North,ON
+NS,North of Superior,ON
+OE,Ontario East,ON
+RC,Rainbow Country,ON
+SO,Southwestern Ontario,ON
+SC,Sunset Country,ON
+KI,Kings County,PE
+PR,Prince County,PE
+QU,Queens County,PE
+AT,Abitibi-temiscamingue,QB
+BSL,Bas Saint-Laurent,QB
+CE,Cantons de l est,QB
+CDQ,Centre-du-Quebec,QB
+CH,Charlevoix,QB
+CHA,Chaudiere-Appalaches,QB
+CN,Côte-Nord,QB
+DU,Duplessis,QB
+GAS,Gaspesie,QB
+IDM,Iles de la madeleine,QB
+LAN,Lanaudiere,QB
+LAU,Laurentides,QB
+LAV,Laval,QB
+MAU,Mauricie,QB
+MGIE,Monteregie,QB
+MTL,Montreal,QB
+NDQ,Nord du Quebec,QB
+OUT,Outaouais,QB
+QUE,Quebec,QB
+S-LSJ,Saguenay Lac Saint Jean,QB
+GR,Grassland,SW
+NB,Northern Boreal,SW
+PL,Parkland,SW
+SB,Southern Boreal,SW
+CR,Central Region,YK
+KR,Khuane Region,YK
+NR,Northern Region,YK
+WL,Watson Lake Region,YK
+WH,Whitehorse Region,YK

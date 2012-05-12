@@ -1,0 +1,420 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,td,th {
+	font-family: Arial, Tahoma, Times New Roman, Lucida Sans;
+	font-size: 12px;
+	color: #000;
+}
+
+body {
+	background-color: #FFF;
+	background-repeat: no-repeat;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	behavior: url(stylesheet/csshover.htc);
+}
+
+a:link {
+	color: #009;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #009;
+	font-weight:bold;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #F90;
+	font-weight:bold;
+}
+
+a:active {
+	text-decoration: none;
+	color: #900;
+	font-weight:bold;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: Times New Roman, Times, serif;
+}
+
+#main_tb{
+	/*margin-left:auto;
+	margin-right:auto;*/
+	border:0px solid;
+	min-height:200px;
+	width:1024px;
+}
+img{
+	border:0;
+}
+
+.error{
+	background-color:#fff0f0;
+	border:solid 2px #FFCACA;
+	width:auto;
+	/** TOP, LEFT, BOTTOM, RIGHT*/
+	padding:10px 10px 10px 10px;
+	color:#e80000;
+	font-size:12px;
+	font-weight:bold;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.success{
+	background-color:#ecffd5;
+	border:2px solid #bae09b;
+	color:#5ba600;
+	font-weight:bold;
+	padding-bottom:15px;
+	padding-top:15px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+
+.header{
+	font-size:16px;
+	color:#FFF;
+	font-weight:bold;
+	background:#666;
+	padding:5px;
+}
+
+/********* MENU *********/
+
+#left_menu{
+	padding:5px;
+	padding-top:10px;
+	border:1px solid #CCC;
+	min-height:600px;
+}
+
+#left_menu .menu_header{
+	background:#CCC;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#left_menu .menu_body{
+	padding:0;
+	list-style:none;
+	margin:5px;
+}
+
+#left_menu .menu_body{
+}
+
+#left_menu .menu_min_header{
+	background:#CFF;
+	font-weight:bold;
+	padding:3px;
+}
+
+#left_menu .menu_body_body{
+	margin:0;
+	padding-left:20px;
+	list-style:none;
+}
+
+/**** end of menu *****/
+
+.page_header{
+	font-size:18px;
+	font-weight:bold;
+}
+
+.label{
+	font-weight:bold;
+}
+
+
+/******************************* ADMIN  ****************************************/
+
+/*top */
+#top_div{
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	padding:5px;
+	border:1px solid #CCC;
+}
+
+.list_shade{
+	background:#EBEBEB;
+}
+
+
+/** setting page */
+.setting_div{
+	padding-bottom:10px;
+}
+
+.setting_div a{
+	color:#003;
+	font-size:14px;
+}
+
+.setting_div a:hover{
+	color:#F90;
+}
+
+
+TABLE.tb_table {
+	background-color: #d9d9d9;
+	width: 100%;
+}
+
+TD.tb_col_head {
+	background-color: #E9E9E9;
+	font-weight: bold;
+}
+
+TD.tb_col_data {
+	background-color: #ffffff;
+}
+
+
+/**** post jobs **********/
+.big_box{
+	overflow:auto;
+	height:150px;
+	border:1px solid #336699;
+	padding-left:5px;
+}
+
+.big_box .new_job{
+	float:left;
+	width:45%;
+}
+
+.small_box{
+	overflow:auto;
+	height:80px;
+	border:1px solid #336699;
+	padding-left:5px;
+}
+.small_box .new_job{
+	float:left;
+	width:45%;
+}
+
+
+/******* view things ******/
+.shade_tb{
+	background:#CCC;
+	height:30px;
+	font-weight:bold;
+}
+
+.tb_1 {
+	border:1px solid #CCC;
+}
+
+/******** EMAIL TEMPLATEs **********/
+.table_shade{
+	background:#999;
+}
+
+.cell_white{
+	background:#FFF;
+}
+
+.cell_shade{
+	background:#E2E2E2;
+}
+
+/*** manage listing **/
+tr.searchcv_nav{
+	background:url('../../images/NavBg.png');
+	font-weight:bold;
+	font-size:105%;
+	height:35px;
+	color:#FFF;
+
+}
+.TableSRNav-L {
+	background-image: url('../../images/NavLeft.png');
+	width:8px;
+	height:35px;
+}
+.TableSRNav-R {
+	background-image: url('../../images/NavRight.png');
+	width:8px;
+	height:35px;
+}
+.sc_nav_{
+	float:right;
+	clear:both;
+	margin-right:10px;
+}
+
+
+/* job_overview_table **/
+.job_overview_table{
+	border:1px solid;
+	padding:5px;
+}
+
+.job_overview_table TR TD{
+	height:20px;	
+}
+
+.highlight_job{
+	background:#FAFBE1;
+}
+
+.bold{
+	font-weight:bold;
+}
+
+
+/*** setting*/
+#setting{
+	background:#F3F3F3;
+	border:0px solid #333;
+}
+
+
+#setting tr{
+	height:30px;
+}
+
+#setting .highlight{
+	background:#E9E9E9;
+}
+
+
+
+/** seo */
+	.seo_header {
+		background:#FFE6CC;
+		color:#000;
+		padding-left:5px; 
+		font-size:14px; 
+		font-weight:bold;
+	}
+
+
+
+/*** this is new main ***/
+
+#menu_nav ul{
+  font-family: Arial, Verdana;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#menu_nav ul li {
+  display: block;
+  position: relative;
+  float: left;
+}
+
+#menu_nav ul li a:hover {
+	color:#FFF;
+}
+
+#menu_nav ul li ul { 
+	display: none; 
+}
+
+#menu_nav ul ul li a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+  padding: 5px 15px 5px 15px;
+  background: #2C5463;
+  margin-left: 1px;
+  white-space: nowrap;
+}
+
+#menu_nav ul ul li a:hover { 
+	background: #617F8A; 
+}
+
+#menu_nav ul li:hover ul {
+  display: block;
+  position: absolute;
+  z-index:1000;
+}
+
+#menu_nav ul li:hover li {
+  float: none;
+  font-size: 11px;
+}
+#menu_nav ul li:hover a { 
+	background: #617F8A; 
+}
+
+#menu_nav ul li:hover li a:hover { 
+	background: #95A9B1;
+}
+
+
+/********end ****/
+
+
+.nav{
+	float:right;
+	clear:both;
+	margin-right:10px;
+}
+
+
+.large_box{
+	height:150px;
+}
+.small_box{
+	height:80px;
+}
+.box{
+	overflow:auto;
+	border:1px solid #336699;
+	padding-left:5px;
+}
+
+.new_job{
+	float:left;
+	width:45%;
+}
+
+
+.job{
+	margin-left:5px;
+	margin-right:75px;
+}
+
+.small_box{
+	overflow:auto;
+	height:80px;
+	border:1px solid #336699;
+	padding-left:5px;
+}
+.small_box .new_job{
+	float:left;
+	width:45%;
+}
+
+
+.big_box{
+	overflow:auto;
+	height:150px;
+	border:1px solid #336699;
+	padding-left:5px;
+}
+
+.big_box .new_job{
+	float:left;
+	width:45%;
+}

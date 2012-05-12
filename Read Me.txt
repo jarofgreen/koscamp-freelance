@@ -1,0 +1,32 @@
+Jobberland.com script setup for v1.3
+
+Step 1.
+Extract Jobberland script on your PC.
+
+Step 2.
+Once you have extracted jobberland Script. 
+Open libs/config.php
+
+Change server and database setting
+
+	define( 'DB_SERVER', 'localhost' );
+	define( 'DB_USER', '' );
+	define( 'DB_PASS', '' );
+	define( 'DB_NAME', '' );
+	define( 'DB_PREFIX', 'jobberland_' );
+
+Step 3.
+Once you have type in your sever and database setting then copy tables into database.
+
+These are in the main folder
+1st : sql/tables.sql into your database.
+2nd : sql/system_data.sql then this 
+3rd : sql/list_countries.sql then this
+
+Step 4.
+Login into your admin and change password for admin user.
+Username: admin
+Password: admin
+
+
+Finish
